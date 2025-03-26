@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container" style=" max-width: 40vw;">
+    <h1>Audio Classifier</h1>
+    <form id="audioForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="audioFile" style="margin: 10px 0px 10px 0px; color: #E0E0E0;">Upload an Audio File (WAV or MP3)</label>
+            <input type="file" class="form-control-file" style="color: #E0E0E0;" name="file" accept=".wav,.mp3" required>
+        </div>
+        <button type="submit" style="background-color: #673AB7; transition: 0.3s;
+            "class="btn btn-primary" style="margin-top: 10px ;">Classify</button>
+    </form>
+
+    <div class="result" id="result" style="display:none;">
+        <h4 style="color: #FFC107;">Prediction Result:</h4>
+        <p id="classIndex"></p>
+        <p id="className"></p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+// Handle form submission
+$('#audioForm').on('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+    
+    $.ajax({
+        url: '/predict',
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('#classIndex').text('Class Index: ' + data.class_index);
+            $('#className').text('Class Name: ' + data.class_name);
+            $('#result').show(); // Show result div
+        },
+        error: function() {
+            alert('Error occurred while predicting.');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
