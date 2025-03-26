@@ -71,26 +71,22 @@ A **Flask-based web interface** is provided for real-time audio classification.
 
 <h3>1️⃣ Clone the Repository</h3>
 
-```sh
 git clone https://github.com/your-repo-url.git
 cd Audio-Classification
 <h3>2️⃣ Create & Activate a Virtual Environment</h3>
-sh
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 <h3>3️⃣ Install Dependencies</h3>
-sh
 Copy
 Edit
 pip install -r requirements.txt
 <h3>4️⃣ Run the Application</h3>
-sh
 Copy
 Edit
 python app.py
 🚀 Visit: http://127.0.0.1:5000/ to access the web interface.
-
+---
 <h2 align="center">👨‍💻 Developed By</h2> <p align="center"> <a href="https://github.com/kushal-s0">Kushal</a> </p> <p align="center">⭐ Give this project a star if you like it! ⭐</p> ```
 This follows the exact format of your example. Let me know if you need any tweaks! 🚀
