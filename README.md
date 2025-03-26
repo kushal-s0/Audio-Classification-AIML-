@@ -10,9 +10,6 @@
   <a href="https://forthebadge.com">
     <img src="https://forthebadge.com/images/badges/made-with-python.svg" alt="Made with Python" />
   </a> &nbsp;
-  <a href="https://forthebadge.com">
-    <img src="https://forthebadge.com/images/badges/powered-by-tensorflow.svg" alt="Powered by TensorFlow" />
-  </a>
 </p>
 
 ---
@@ -35,7 +32,7 @@ A **Flask-based web interface** is provided for real-time audio classification.
 
 ## 🎥 Demo Video
 
-[![Watch the Demo](https://img.shields.io/badge/▶-Watch%20Demo-red)](https://your-demo-link.com)
+[![Watch the Demo](https://img.shields.io/badge/▶-Watch%20Demo-red)](https://drive.google.com/file/d/1n_-CxvIwHXLzd8z-JSrqUgpQ0pC6laxq/view?usp=sharing)
 
 ---
 
@@ -71,7 +68,7 @@ A **Flask-based web interface** is provided for real-time audio classification.
 
 <h3>1️⃣ Clone the Repository</h3>
 
-git clone https://github.com/your-repo-url.git
+git clone https://github.com/kushal-s0/Audio-Classification-AIML-/
 cd Audio-Classification
 <h3>2️⃣ Create & Activate a Virtual Environment</h3>
 Copy
@@ -89,4 +86,3 @@ python app.py
 🚀 Visit: http://127.0.0.1:5000/ to access the web interface.
 ---
 <h2 align="center">👨‍💻 Developed By</h2> <p align="center"> <a href="https://github.com/kushal-s0">Kushal</a> </p> <p align="center">⭐ Give this project a star if you like it! ⭐</p> ```
-This follows the exact format of your example. Let me know if you need any tweaks! 🚀
